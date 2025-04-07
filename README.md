@@ -1,56 +1,71 @@
-# 📁 Visualizador de Estrutura de Pastas
+# File Synapses 📂
 
----
-Aplicação Python com interface gráfica feita em **Flet**, que permite visualizar, navegar, exportar e analisar a estrutura de diretórios do sistema de forma prática e moderna.
+Um visualizador e gerenciador de estrutura de pastas desenvolvido com Python e Flet.
 
----
+## Funcionalidades
 
-## 🚀 Funcionalidades
+- 🔍 Visualização dinâmica da estrutura de pastas
+- 📃 Exportação em diferentes formatos (TXT, PDF, Markdown, JSON)
+- 📊 Estatísticas de arquivos e pastas
+- 🗜️ Compactação de pastas em ZIP
+- 🌓 Modo escuro/claro
+- 🔎 Busca de arquivos/pastas
 
-- 📂 Seleção interativa de pastas
-- 🧭 Visualização hierárquica com árvore colapsável
-- 🔍 Busca por arquivos/pastas
-- 📄 Exportação:
-  - `.txt`
-  - `.pdf`
-  - `.md`
-  - `.json`
-- 📦 Compactação em `.zip`
-- 📊 Geração de relatório com estatísticas:
-  - Número de arquivos e pastas
-  - Tamanho total (em MB)
-  - Extensões mais comuns
-- 🧠 Preferências salvas automaticamente
-- 🌑 Tema escuro ativado por padrão
+## Requisitos
 
----
+- Python 3.8+
+- Dependências: flet, fpdf
 
-## 🖥️ Interface
+## Instalação
 
-> Adicione aqui uma imagem da interface renderizada
+1. Clone o repositório
+   ```
+   git clone https://github.com/seuusuario/file-synapses.git
+   cd file-synapses
+   ```
 
----
+2. Instale as dependências
+   ```
+   pip install flet fpdf
+   ```
 
-## ▶️ Como Executar
+3. Execute o aplicativo
+   ```
+   python app.py
+   ```
 
-```bash
-pip install flet fpdf
-python app.py
-```
+## Estrutura do Projeto
 
-## 📂 Estrutura de Projeto
+- `app.py`: Aplicativo principal
+- `utils/`: Módulos de utilidades
+  - `explorer.py`: Funções de exploração de pastas
+  - `exporter.py`: Funções de exportação
+  - `stats.py`: Geração de estatísticas
+  - `zipping.py`: Funções de compactação
+  - `config.py`: Gerenciamento de configurações
+- `assets/`: Arquivos de recursos
+  - `config.json`: Arquivo de configuração
 
-📁 projeto/
-├── app.py
-├── utils/
-│   ├── explorer.py
-│   ├── exporter.py
-│   ├── stats.py
-│   ├── config.py
-│   └── zipping.py
-└── assets/
-    └── config.json
+## Funcionalidades em Detalhe
 
-## 🤝 Contribuições
+### Visualização de Estrutura
+O aplicativo mostra a estrutura de pastas de forma hierárquica, com ícones diferentes para cada tipo de arquivo.
 
-Sinta-se livre para contribuir com novas ideias, melhorias ou correções!
+### Exportação
+- **TXT**: Exporta a estrutura em formato de texto
+- **PDF**: Cria um documento PDF com a estrutura
+- **Markdown**: Exporta em formato Markdown para documentação
+- **JSON**: Exporta a estrutura em formato JSON para integração com outros sistemas
+
+### Estatísticas
+Gera estatísticas da pasta selecionada, incluindo:
+- Total de arquivos
+- Total de pastas
+- Tamanho total
+- Tipos de arquivos mais comuns
+
+### Compactação
+Permite compactar a pasta selecionada em um arquivo ZIP.
+
+## Licença
+MIT

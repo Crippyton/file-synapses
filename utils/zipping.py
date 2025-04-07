@@ -1,5 +1,6 @@
 import shutil
 import os
+import flet as ft
 
 def zipar_pasta(txt_pasta, page):
     if not txt_pasta.value:
